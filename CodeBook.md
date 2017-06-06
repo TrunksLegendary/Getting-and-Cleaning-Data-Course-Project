@@ -1,18 +1,14 @@
-Getting And Cleaning Data Project :
+## Getting And Cleaning Data Project :
 
-Raw Data Files
+### Raw Data Files:
 Location: 'UCI HAR Dataset'
 The File 'README.txt' in the 'UCI HAR Dataset' folder contains information on files included in the raw data.
 
-The File 'features_info.txt' in the 'UCI HAR Dataset' folder contains information on features in the raw data.
+- The File 'features_info.txt' in the 'UCI HAR Dataset' folder contains information on features in the raw data.
+- The file 'run_analysis.r' is the primary R script, which downloads and processess the raw data, then produces the Tidy.csv
+- Read the files containing the labels for activities and features of vector
 
-The file 'run_analysis.r' is the primary R script, which downloads and processess the raw data, then produces the Tidy.csv
 
-
-
-Read the files containing the labels for activities and features of vector
-
-Read the test data
 
 2.1) Read the data identifying subjects for test observations and rename columns 2.2) Read the data containing the feture list for test observations and add descriptions 2.3) Read the data identifying type of activity for test observations and rename columns 2.4) Column bind files under 2.1, 2.2 and 2.3 to get the complete table for test observations 2.5) Keep only necessary columns, Subject.Id, Activity and columns containing mean in their description 2.6) Add the description for activity type to produce the final test data for observations
 
