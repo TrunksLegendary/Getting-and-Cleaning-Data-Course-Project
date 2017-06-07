@@ -1,5 +1,8 @@
 ### - File: run_analysis.r
 
+library('reshape')
+library('reshape2')
+
 ### --- Download Data and Extract to a Directory --- ###
 ### ------------------------------------------------ ###
 dataFile <- 'https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip'

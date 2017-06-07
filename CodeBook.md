@@ -1,6 +1,6 @@
 ## Getting And Cleaning Data Project :
 
-### Raw Data Files:
+####Data Files:
 Location: 'UCI HAR Dataset'
 The File 'README.txt' in the 'UCI HAR Dataset' folder contains information on files included in the raw data.
 
@@ -8,18 +8,24 @@ The File 'README.txt' in the 'UCI HAR Dataset' folder contains information on fi
 - The file 'run_analysis.r' is the primary R script, which downloads and processess the raw data, then produces the Tidy.csv
 - Read the files containing the labels for activities and features of vector
 
+####Data Set Information and Background:
+
+The data is a result of experiments carried out with a volunteer group of 20 individuals between the ages of 19 and 48 years.
+
+Activities studied included - WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, an LAYING while wearing a Samsung Galaxy S II smartphone on the waist.Data was captured using the smartphones builtin accelerometer and gyroscope.
+
+--see reference link below
 
 
-2.1) Read the data identifying subjects for test observations and rename columns 2.2) Read the data containing the feture list for test observations and add descriptions 2.3) Read the data identifying type of activity for test observations and rename columns 2.4) Column bind files under 2.1, 2.2 and 2.3 to get the complete table for test observations 2.5) Keep only necessary columns, Subject.Id, Activity and columns containing mean in their description 2.6) Add the description for activity type to produce the final test data for observations
+####Data Processing:
 
-Read the training data
-Reproduce steps 2.1 -> 2.6 for training data to get the final training data for observations
 
-Merge Training and Test data to create one data set (training and test data have the same format, they will be bound vertically)
+All appropriate data files were read into data frames, column headers were added for clarity.Training and test sets were combined to form a merged data set.
 
-Reshape the merged data to produce the desired format for data aggregation
+A Tidy.csv data file was created containing the mean of each feature for each subject and each activity. Each row contains the mean value for each of the features for that subject/activity combination. 
 
-5.1) Use the melt function to prepare data for dcast aggregation. 5.2) Aggregate data with dcast function to produce the final (tidy) data set
+The tidy data set was output to a CSV file.
 
-Finnaly write out to csv file the tidy data set in the Data folder.
-==========================================================
+-------------------------------------------------------------------------------
+
+[ref: UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
