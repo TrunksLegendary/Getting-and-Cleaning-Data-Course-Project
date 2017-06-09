@@ -18,7 +18,6 @@ subTrain <- read.table('./UCI HAR Dataset/train/subject_Train.txt')
 subTest <- read.table('./UCI HAR Dataset/test/subject_Test.txt')
 y_train <- read.table('./UCI HAR Dataset/train/y_train.txt')
 y_test <- read.table('./UCI HAR Dataset/test/y_test.txt')
-
 featureN <- read.table('./UCI HAR Dataset/features.txt')
 
 ### --- STEP 3: Uses descriptive activity names 
@@ -49,10 +48,16 @@ allFiles <- allFiles[, mean_std]
 ### --- with descriptive Activity names.
 ### --------------------------------------------------- ###
 allFiles$activity <- factor(allFiles$activity, 
-                            labels=c('Walking','GoingUpstairs','GoingDownstairs','SittingDown','Standing','LayingDown'))
+                            labels=c('Walking',
+                                     'GoingUpstairs',
+                                     'GoingDownstairs',
+                                     'SittingDown',
+                                     'Standing',
+                                     'LayingDown'))
 
 ### ---  STEP 5:  Create Tidy Dataset            --- ###
 ### ------------------------------------------------ ###
 formatedData <- melt(allFiles, id=c('subjectID','activity'))
 tidyData <- dcast(formatedData, subjectID+activity ~ variable, mean)
+
 write.csv(tidyData, 'tidy.csv', row.names=FALSE)
