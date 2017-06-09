@@ -60,4 +60,5 @@ allFiles$activity <- factor(allFiles$activity,
 formatedData <- melt(allFiles, id=c('subjectID','activity'))
 tidyData <- dcast(formatedData, subjectID+activity ~ variable, mean)
 
-write.csv(tidyData, 'tidy.csv', row.names=FALSE)
+write.csv(tidyData, './tidy.csv', row.names=FALSE)
+write.csv(tidyData, "./tidy_txt.txt",row.names=FALSE)
